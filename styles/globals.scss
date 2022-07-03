@@ -1,0 +1,71 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main Page */
+
+.hero-blob {
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  background-image: url("/images/blob.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50rem;
+  width: 50rem;
+  z-index: -1;
+  top: -180px;
+  right: 50px;
+  animation: spin 10s infinite linear;
+}
+
+.bracker-project {
+  background-image: linear-gradient(90deg, rgba(42, 121, 216, 0.732) 0%, rgba(124, 186, 233, 0.31)),
+    url("/images/bracker.webp");
+}
+
+.crypto-project {
+  background-image: linear-gradient(90deg, #1a1a33cf 0%, #3d3d6783), url("/images/crypto.webp");
+  background-position: center top;
+}
+
+/** Loader */
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
